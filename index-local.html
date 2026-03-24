@@ -1,0 +1,577 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giảm Cân</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#111;color:#fff;padding:12px;max-width:500px;margin:0 auto}
+.clock{text-align:center;padding:16px 0}
+.clock b{font-size:48px;color:#a78bfa}
+.clock div{font-size:13px;color:#999;margin-top:4px}
+.nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.nav button{background:#2a2a3e;border:none;color:#fff;width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer}
+.nav .td{background:#a78bfa;border-radius:20px;width:auto;padding:8px 18px;font-size:13px;font-weight:700}
+.box{background:#1e1e2e;border-radius:14px;padding:16px;margin-bottom:14px}
+.box h2{font-size:15px;margin-bottom:12px;color:#a78bfa}
+.datebox{text-align:center;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:14px;padding:20px;margin-bottom:14px}
+.datebox .dn{font-size:13px;opacity:.8;letter-spacing:2px;text-transform:uppercase}
+.datebox .dd{font-size:48px;font-weight:900}
+.datebox .dm{font-size:14px;opacity:.8}
+.datebox .ph{display:inline-block;background:rgba(255,255,255,.2);padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;margin-top:8px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.st{background:#1e1e2e;border-radius:12px;padding:12px;text-align:center}
+.st b{font-size:24px;color:#4ade80;display:block}
+.st span{font-size:11px;color:#888}
+.pbar{background:#333;border-radius:10px;height:18px;overflow:hidden;margin:8px 0}
+.pfill{background:linear-gradient(90deg,#4ade80,#22d3ee);height:100%;border-radius:10px}
+.pr{display:flex;justify-content:space-between;font-size:12px;color:#888}
+.ml{background:#2a2a3e;border-radius:10px;padding:12px;margin-bottom:8px}
+.ml.ac{border-left:3px solid #4ade80}
+.ml .mt{font-size:11px;color:#a78bfa;font-weight:700;text-transform:uppercase}
+.ml .mn{font-size:15px;font-weight:700;margin:4px 0 2px}
+.ml .mo{font-size:12px;color:#888}
+.ml .mc{font-size:11px;color:#f59e0b;font-weight:600;margin-top:2px}
+.ex{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #333}
+.ex:last-child{border:none}
+.en{background:#a78bfa;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.ban{background:#dc2626;border-radius:14px;padding:14px;text-align:center;margin-bottom:14px}
+.chk{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #333;cursor:pointer}
+.chk:last-child{border:none}
+.cb{width:24px;height:24px;border:2px solid #a78bfa;border-radius:6px;flex-shrink:0;text-align:center;line-height:20px;font-size:14px}
+.chk.ok .cb{background:#4ade80;border-color:#4ade80;color:#fff}
+.chk.ok .ct{text-decoration:line-through;opacity:.4}
+.ct{font-size:14px}
+.dr{font-size:28px;opacity:.25;cursor:pointer;display:inline-block}
+.dr.on{opacity:1}
+.wi{background:#2a2a3e;border:2px solid #a78bfa;border-radius:10px;color:#fff;font-size:24px;font-weight:700;text-align:center;width:110px;padding:8px;outline:none}
+.btn{background:#a78bfa;color:#fff;border:none;border-radius:10px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;margin-top:8px}
+.wr{display:flex;justify-content:space-between;padding:6px 0;font-size:12px;color:#888;border-bottom:1px solid #222}
+.cheat{background:linear-gradient(135deg,#f59e0b,#ef4444);border-radius:14px;padding:16px;text-align:center;margin-bottom:14px}
+.quote{text-align:center;font-size:13px;color:#666;font-style:italic;padding:12px 8px}
+.cal-box{background:#1e1e2e;border-radius:14px;padding:16px;margin-bottom:14px}
+.cal-ring{position:relative;width:160px;height:160px;margin:0 auto 12px}
+.cal-ring svg{transform:rotate(-90deg)}
+.cal-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.cal-center b{font-size:28px;color:#f59e0b;display:block}
+.cal-center span{font-size:11px;color:#888}
+.cal-bar-bg{background:#333;border-radius:6px;height:10px;overflow:hidden;margin:4px 0}
+.cal-bar-fill{height:100%;border-radius:6px;transition:width .3s}
+.cal-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #2a2a3e;cursor:pointer}
+.cal-item:last-child{border:none}
+.cal-check{width:22px;height:22px;border:2px solid #f59e0b;border-radius:50%;flex-shrink:0;text-align:center;line-height:18px;font-size:12px}
+.cal-item.eaten .cal-check{background:#f59e0b;color:#fff}
+.cal-item.eaten .cal-text{opacity:.5;text-decoration:line-through}
+.cal-text{flex:1;font-size:13px}
+.cal-kcal{font-size:13px;color:#f59e0b;font-weight:700;flex-shrink:0}
+.cal-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px}
+.cal-stat{background:#2a2a3e;border-radius:10px;padding:10px;text-align:center}
+.cal-stat b{font-size:18px;display:block}
+.cal-stat span{font-size:10px;color:#888}
+.cal-add{margin-top:12px;padding-top:12px;border-top:1px solid #333}
+.cal-input{background:#2a2a3e;border:1px solid #555;border-radius:8px;color:#fff;font-size:14px;padding:8px;outline:none;width:100%;margin-bottom:6px}
+.cal-input:focus{border-color:#f59e0b}
+.cal-input-row{display:flex;gap:6px}
+.cal-input-row input{flex:1}
+.cal-quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.cal-qbtn{background:#2a2a3e;border:1px solid #444;border-radius:8px;padding:6px 10px;font-size:11px;color:#ddd;cursor:pointer}
+.cal-qbtn:active{background:#f59e0b;color:#000}
+.tdee-box{background:linear-gradient(135deg,#1e3a5f,#1e1e2e);border:1px solid #667eea;border-radius:14px;padding:16px;margin-bottom:14px}
+.tdee-box h2{color:#667eea;font-size:15px;margin-bottom:10px}
+.tdee-row{display:flex;justify-content:space-between;padding:5px 0;font-size:13px;border-bottom:1px solid #253050}
+.tdee-row:last-child{border:none}
+.tdee-row b{color:#69f0ae}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;font-size:22px;padding:12px 0">🔥 Giảm Cân 78 &rarr; 68kg</h1>
+
+<div class="clock">
+<b id="clk">00:00:00</b>
+<div id="clkd">...</div>
+</div>
+
+<div class="nav">
+<button onclick="offset--;render()">&#9664;</button>
+<button class="td" onclick="offset=0;render()">📍 HÔM NAY</button>
+<button onclick="offset++;render()">&#9654;</button>
+</div>
+
+<div id="app"></div>
+
+<script>
+var offset=0;
+var THU=["Ch\u1EE7 Nh\u1EADt","Th\u1EE9 Hai","Th\u1EE9 Ba","Th\u1EE9 T\u01B0","Th\u1EE9 N\u0103m","Th\u1EE9 S\u00E1u","Th\u1EE9 B\u1EA3y"];
+var TH=["Th\u00E1ng 1","Th\u00E1ng 2","Th\u00E1ng 3","Th\u00E1ng 4","Th\u00E1ng 5","Th\u00E1ng 6","Th\u00E1ng 7","Th\u00E1ng 8","Th\u00E1ng 9","Th\u00E1ng 10","Th\u00E1ng 11","Th\u00E1ng 12"];
+
+var SW=78,GW=68,TD=240,HEIGHT=167,AGE=30;
+var BMR=Math.round(10*SW+6.25*HEIGHT-5*AGE+5);
+var TDEE=Math.round(BMR*1.3);
+var LIMIT=TDEE-500;
+
+function z(n){return n<10?"0"+n:""+n}
+
+function tick(){
+var n=new Date();
+document.getElementById("clk").textContent=z(n.getHours())+":"+z(n.getMinutes())+":"+z(n.getSeconds());
+document.getElementById("clkd").textContent=THU[n.getDay()]+", "+n.getDate()+"/"+z(n.getMonth()+1)+"/"+n.getFullYear();
+}
+setInterval(tick,1000);
+tick();
+
+function gvd(){var d=new Date();d.setDate(d.getDate()+offset);return d}
+function gdk(d){return d.getFullYear()+"-"+z(d.getMonth()+1)+"-"+z(d.getDate())}
+
+function gsd(){
+var s=localStorage.getItem("ds5");
+if(!s){var t=new Date();s=t.getFullYear()+"-"+z(t.getMonth()+1)+"-"+z(t.getDate());localStorage.setItem("ds5",s)}
+var a=s.split("-");return new Date(parseInt(a[0]),parseInt(a[1])-1,parseInt(a[2]))
+}
+
+function glw(){
+try{var h=JSON.parse(localStorage.getItem("wh5"));if(!h)return SW;var k=Object.keys(h).sort();if(k.length===0)return SW;return h[k[k.length-1]]}catch(e){return SW}
+}
+
+function gcals(dk){try{var c=JSON.parse(localStorage.getItem("cal5_"+dk));return c?c:[]}catch(e){return[]}}
+function scals(dk,arr){localStorage.setItem("cal5_"+dk,JSON.stringify(arr))}
+
+function gMealCals(dow){
+var data={
+1:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"C\u01A1m g\u00E0 (ph\u1EA7n b\u00ECnh th\u01B0\u1EDDng, b\u1ECF da, th\u00EAm rau)",c:600,k:"l"},
+{n:"1 chu\u1ED1i + 1 h\u1ED9p s\u1EEFa t\u01B0\u01A1i K\u0110",c:210,k:"s"},
+{n:"B\u00E1nh m\u00EC th\u1ECBt n\u01B0\u1EDBng (kh\u00F4ng b\u01A1 pate) + 1 tr\u1EE9ng lu\u1ED9c",c:450,k:"d"}
+],
+2:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"Ph\u1EDF b\u00F2 t\u00F4 th\u01B0\u1EDDng (\u00EDt b\u00E1nh, nhi\u1EC1u rau)",c:550,k:"l"},
+{n:"1 s\u1EEFa chua K\u0110 + 1 chu\u1ED1i",c:170,k:"s"},
+{n:"C\u01A1m t\u1EA5m s\u01B0\u1EDDn nh\u1ECF (\u00EDt c\u01A1m, kh\u00F4ng b\u00EC ch\u1EA3)",c:500,k:"d"}
+],
+3:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"C\u01A1m ph\u1EA7n b\u00ECnh d\u00E2n (1 th\u1ECBt, 2 rau)",c:600,k:"l"},
+{n:"1 n\u1EAFm h\u1EA1t \u0111i\u1EC1u + s\u1EEFa t\u01B0\u01A1i K\u0110",c:220,k:"s"},
+{n:"2 tr\u1EE9ng lu\u1ED9c + b\u00E1nh m\u00EC nh\u1ECF + s\u1EEFa t\u01B0\u01A1i K\u0110",c:450,k:"d"}
+],
+4:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"C\u01A1m t\u1EA5m s\u01B0\u1EDDn n\u01B0\u1EDBng (b\u00ECnh th\u01B0\u1EDDng)",c:620,k:"l"},
+{n:"1 chu\u1ED1i + 1 s\u1EEFa chua K\u0110",c:170,k:"s"},
+{n:"B\u00FAn g\u00E0 t\u00F4 nh\u1ECF + 1 tr\u1EE9ng lu\u1ED9c",c:480,k:"d"}
+],
+5:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"B\u00FAn b\u00F2 (b\u00ECnh th\u01B0\u1EDDng, nhi\u1EC1u rau)",c:550,k:"l"},
+{n:"1 s\u1EEFa t\u01B0\u01A1i K\u0110 + 1 chu\u1ED1i",c:210,k:"s"},
+{n:"Salad g\u00E0/b\u00F2 (\u0111\u1EB7t app) + 1 b\u00E1nh m\u00EC nh\u1ECF",c:500,k:"d"}
+],
+6:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"CHEAT MEAL - \u0102n g\u00EC th\u00EDch \u0103n n\u1EA5y!",c:800,k:"l"},
+{n:"1 chu\u1ED1i + s\u1EEFa chua K\u0110",c:170,k:"s"},
+{n:"2 tr\u1EE9ng lu\u1ED9c + s\u1EEFa t\u01B0\u01A1i K\u0110",c:250,k:"d"}
+],
+0:[
+{n:"C\u00E0 ph\u00EA \u0111en kh\u00F4ng \u0111\u01B0\u1EDDng",c:5,k:"m"},
+{n:"B\u00E1nh m\u00EC th\u1ECBt n\u01B0\u1EDBng + 1 tr\u1EE9ng lu\u1ED9c",c:450,k:"l"},
+{n:"1 chu\u1ED1i + 1 s\u1EEFa t\u01B0\u01A1i K\u0110",c:210,k:"s"},
+{n:"C\u01A1m g\u00E0 t\u00F4 nh\u1ECF (\u00EDt c\u01A1m, b\u1ECF da)",c:500,k:"d"}
+]
+};
+return data[dow];
+}
+
+function gMealsDisplay(dow){
+var data={
+1:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - 12H","🍗 C\u01A1m g\u00E0 ph\u1EA7n b\u00ECnh th\u01B0\u1EDDng","B\u1ECF da g\u00E0, th\u00EAm rau ~600 kcal","l"],
+["CHI\u1EC0U - 3H","🍌 1 chu\u1ED1i + 1 s\u1EEFa t\u01B0\u01A1i K\u0110","Mua minimart ~210 kcal","s"],
+["T\u1ED0I - 7H","🥖 B\u00E1nh m\u00EC th\u1ECBt n\u01B0\u1EDBng + 1 tr\u1EE9ng lu\u1ED9c","Kh\u00F4ng b\u01A1 pate ~450 kcal","d"]
+],
+2:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - 12H","🍜 Ph\u1EDF b\u00F2 t\u00F4 th\u01B0\u1EDDng","\u00CDt b\u00E1nh, nhi\u1EC1u rau ~550 kcal","l"],
+["CHI\u1EC0U - 3H","🥛 1 s\u1EEFa chua K\u0110 + 1 chu\u1ED1i","Mua minimart ~170 kcal","s"],
+["T\u1ED0I - 7H","🍖 C\u01A1m t\u1EA5m s\u01B0\u1EDDn nh\u1ECF","\u00CDt c\u01A1m, kh\u00F4ng b\u00EC ch\u1EA3 ~500 kcal","d"]
+],
+3:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - 12H","🍱 C\u01A1m ph\u1EA7n b\u00ECnh d\u00E2n","1 th\u1ECBt, 2 rau ~600 kcal","l"],
+["CHI\u1EC0U - 3H","🥜 1 n\u1EAFm h\u1EA1t \u0111i\u1EC1u + s\u1EEFa t\u01B0\u01A1i K\u0110","Mua minimart ~220 kcal","s"],
+["T\u1ED0I - 7H","🥚 2 tr\u1EE9ng lu\u1ED9c + b\u00E1nh m\u00EC nh\u1ECF + s\u1EEFa t\u01B0\u01A1i K\u0110","Mua minimart ~450 kcal","d"]
+],
+4:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - 12H","🍖 C\u01A1m t\u1EA5m s\u01B0\u1EDDn n\u01B0\u1EDBng","\u0102n b\u00ECnh th\u01B0\u1EDDng ~620 kcal","l"],
+["CHI\u1EC0U - 3H","🍌 1 chu\u1ED1i + 1 s\u1EEFa chua K\u0110","Mua minimart ~170 kcal","s"],
+["T\u1ED0I - 7H","🍜 B\u00FAn g\u00E0 t\u00F4 nh\u1ECF + 1 tr\u1EE9ng lu\u1ED9c","~480 kcal","d"]
+],
+5:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - 12H","🍜 B\u00FAn b\u00F2 b\u00ECnh th\u01B0\u1EDDng","Nhi\u1EC1u rau ~550 kcal","l"],
+["CHI\u1EC0U - 3H","🥛 1 s\u1EEFa t\u01B0\u01A1i K\u0110 + 1 chu\u1ED1i","Mua minimart ~210 kcal","s"],
+["T\u1ED0I - 7H","🥗 Salad g\u00E0/b\u00F2 + b\u00E1nh m\u00EC nh\u1ECF","\u0110\u1EB7t GrabFood ~500 kcal","d"]
+],
+6:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - CHEAT 🎉","🎉 \u0102N G\u00CC TH\u00CDCH \u0102N N\u1EA4Y!","Th\u01B0\u1EDFng cho 1 tu\u1EA7n c\u1ED1 g\u1EAFng ~800 kcal","l"],
+["CHI\u1EC0U - 3H","🍌 1 chu\u1ED1i + s\u1EEFa chua K\u0110","~170 kcal","s"],
+["T\u1ED0I - 7H","🥚 2 tr\u1EE9ng lu\u1ED9c + s\u1EEFa t\u01B0\u01A1i K\u0110","\u0102n nh\u1EB9 ~250 kcal","d"]
+],
+0:[
+["S\u00C1NG - NH\u1ECAN \u0102N","☕ C\u00E0 ph\u00EA \u0111en / tr\u00E0 kh\u00F4ng \u0111\u01B0\u1EDDng / n\u01B0\u1EDBc l\u1ECDc","Kh\u00F4ng \u0103n g\u00EC \u0111\u1EBFn 12h tr\u01B0a","m"],
+["TR\u01AFA - 12H","🥖 B\u00E1nh m\u00EC th\u1ECBt n\u01B0\u1EDBng + 1 tr\u1EE9ng lu\u1ED9c","Kh\u00F4ng b\u01A1 pate ~450 kcal","l"],
+["CHI\u1EC0U - 3H","🍌 1 chu\u1ED1i + 1 s\u1EEFa t\u01B0\u01A1i K\u0110","Mua minimart ~210 kcal","s"],
+["T\u1ED0I - 7H","🍗 C\u01A1m g\u00E0 t\u00F4 nh\u1ECF","\u00CDt c\u01A1m, b\u1ECF da ~500 kcal","d"]
+]
+};
+return data[dow];
+}
+
+function render(){
+try{
+var vd=gvd();
+var dow=vd.getDay();
+var sd=gsd();
+var diff=Math.floor((vd.getTime()-sd.getTime())/86400000);
+var dn=diff+1;
+if(dn<1)dn=0;
+var cw=glw();
+var lost=SW-cw;
+var pct=Math.round(Math.min(100,Math.max(0,(lost/10)*100)));
+var remain=Math.max(0,(cw-GW)).toFixed(1);
+var ew=(SW-(10*(Math.min(Math.max(dn,0),TD)/TD))).toFixed(1);
+var phase="Ch\u01B0a b\u1EAFt \u0111\u1EA7u";
+if(dn>=1&&dn<=60)phase="🌱 G\u0110 1: L\u00E0m quen";
+if(dn>60&&dn<=150)phase="🔥 G\u0110 2: T\u0103ng t\u1ED1c";
+if(dn>150&&dn<=240)phase="🏆 G\u0110 3: Ho\u00E0n th\u00E0nh";
+if(dn>240)phase="✅ \u0110\u00C3 XONG!";
+var hr=new Date().getHours();
+var curM="d";
+if(hr<12)curM="m";else if(hr<15)curM="l";else if(hr<18)curM="s";
+
+var dateKey=gdk(vd);
+var mealCals=gMealCals(dow);
+var eatenData=gcals(dateKey);
+var customCals=[];
+try{var tmp=localStorage.getItem("ccal5_"+dateKey);if(tmp)customCals=JSON.parse(tmp)}catch(e){}
+
+var totalPlan=0;
+for(var i=0;i<mealCals.length;i++)totalPlan+=mealCals[i].c;
+var totalEaten=0;
+for(var i=0;i<mealCals.length;i++){if(eatenData.indexOf(i)>=0)totalEaten+=mealCals[i].c}
+for(var i=0;i<customCals.length;i++)totalEaten+=customCals[i].c;
+
+var calPct=Math.round(Math.min(150,(totalEaten/LIMIT)*100));
+var calColor="#4ade80";
+if(calPct>70)calColor="#f59e0b";
+if(calPct>90)calColor="#ef4444";
+var calRemain=Math.max(0,LIMIT-totalEaten);
+
+var ringR=65;
+var ringC=Math.round(2*3.14159*ringR);
+var ringOff=Math.round(ringC-(Math.min(calPct,100)/100)*ringC);
+
+var html="";
+
+// THÔNG SỐ
+html+="<div class=\"tdee-box\">";
+html+="<h2>📋 Th\u00F4ng s\u1ED1 c\u1EE7a b\u1EA1n</h2>";
+html+="<div class=\"tdee-row\"><span>Chi\u1EC1u cao / C\u00E2n n\u1EB7ng</span><b>"+HEIGHT+"cm / "+cw+"kg</b></div>";
+html+="<div class=\"tdee-row\"><span>BMR (calo c\u01A1 b\u1EA3n)</span><b>"+BMR+" kcal</b></div>";
+html+="<div class=\"tdee-row\"><span>TDEE (calo ti\u00EAu th\u1EE5/ng\u00E0y)</span><b>"+TDEE+" kcal</b></div>";
+html+="<div class=\"tdee-row\"><span>M\u1EE9c \u0103n/ng\u00E0y (TDEE - 500)</span><b style=\"color:#f59e0b\">"+LIMIT+" kcal</b></div>";
+html+="<div class=\"tdee-row\"><span>Gi\u1EA3m m\u1ED7i tu\u1EA7n</span><b>~0.45 kg</b></div>";
+html+="<div class=\"tdee-row\"><span>Gi\u1EA3m m\u1ED7i th\u00E1ng</span><b>~1.8 kg</b></div>";
+html+="<div class=\"tdee-row\"><span>D\u1EF1 ki\u1EBFn \u0111\u1EA1t 68kg</span><b style=\"color:#4ade80\">~5.5 th\u00E1ng</b></div>";
+html+="</div>";
+
+// NGÀY
+html+="<div class=\"datebox\">";
+html+="<div class=\"dn\">"+THU[dow]+"</div>";
+html+="<div class=\"dd\">"+vd.getDate()+"</div>";
+html+="<div class=\"dm\">"+TH[vd.getMonth()]+", "+vd.getFullYear()+"</div>";
+html+="<div class=\"ph\">"+phase+"</div>";
+if(dn>=1&&dn<=TD)html+="<div style=\"font-size:12px;opacity:.7;margin-top:4px\">K\u1EF3 v\u1ECDng: "+ew+"kg</div>";
+html+="</div>";
+
+// STATS
+html+="<div class=\"row3\">";
+html+="<div class=\"st\"><b>"+dn+"</b><span>Ng\u00E0y th\u1EE9</span></div>";
+html+="<div class=\"st\"><b>"+cw+"</b><span>Kg hi\u1EC7n t\u1EA1i</span></div>";
+html+="<div class=\"st\"><b>"+remain+"</b><span>Kg c\u00F2n l\u1EA1i</span></div>";
+html+="</div>";
+
+// TIẾN ĐỘ
+html+="<div class=\"box\"><h2>📊 Ti\u1EBFn \u0111\u1ED9</h2>";
+html+="<div class=\"pbar\"><div class=\"pfill\" style=\"width:"+Math.max(2,pct)+"%\"></div></div>";
+html+="<div class=\"pr\"><span>78kg</span><span>"+pct+"%</span><span>68kg</span></div></div>";
+
+// CHEAT
+if(dow===6)html+="<div class=\"cheat\"><h2 style=\"font-size:20px\">🎉 CHEAT DAY!</h2><p style=\"font-size:13px;opacity:.9;margin-top:6px\">Tr\u01B0a nay \u0103n tho\u1EA3i m\u00E1i! T\u1ED1i \u0103n nh\u1EB9 nh\u00E9 👌</p></div>";
+
+// CALO
+html+="<div class=\"cal-box\">";
+html+="<h2 style=\"color:#f59e0b\">🔥 Calo h\u00F4m nay (h\u1EA1n m\u1EE9c: "+LIMIT+" kcal)</h2>";
+html+="<div class=\"cal-ring\">";
+html+="<svg width=\"160\" height=\"160\">";
+html+="<circle cx=\"80\" cy=\"80\" r=\""+ringR+"\" fill=\"none\" stroke=\"#333\" stroke-width=\"12\"/>";
+html+="<circle cx=\"80\" cy=\"80\" r=\""+ringR+"\" fill=\"none\" stroke=\""+calColor+"\" stroke-width=\"12\" stroke-dasharray=\""+ringC+"\" stroke-dashoffset=\""+ringOff+"\" stroke-linecap=\"round\"/>";
+html+="</svg>";
+html+="<div class=\"cal-center\"><b>"+totalEaten+"</b><span>/ "+LIMIT+" kcal</span></div>";
+html+="</div>";
+
+html+="<div class=\"cal-row\">";
+html+="<div class=\"cal-stat\"><b style=\"color:#4ade80\">"+totalEaten+"</b><span>\u0110\u00E3 \u0103n (kcal)</span></div>";
+html+="<div class=\"cal-stat\"><b style=\"color:#f59e0b\">"+calRemain+"</b><span>C\u00F2n l\u1EA1i (kcal)</span></div>";
+html+="<div class=\"cal-stat\"><b style=\"color:"+(calPct>100?"#ef4444":"#22d3ee")+"\">"+calPct+"%</b><span>H\u1EA1n m\u1EE9c</span></div>";
+html+="</div>";
+
+html+="<div style=\"margin-top:12px\">";
+html+="<div style=\"display:flex;justify-content:space-between;font-size:11px;color:#888\"><span>0</span><span>"+LIMIT+" kcal</span></div>";
+html+="<div class=\"cal-bar-bg\"><div class=\"cal-bar-fill\" style=\"width:"+Math.min(100,calPct)+"%;background:"+calColor+"\"></div></div>";
+html+="</div>";
+
+html+="<div style=\"margin-top:14px;font-size:12px;color:#888;margin-bottom:8px\">📋 B\u1EA5m \u0111\u1EC3 \u0111\u00E1nh d\u1EA5u \u0111\u00E3 \u0103n:</div>";
+for(var i=0;i<mealCals.length;i++){
+var isE=eatenData.indexOf(i)>=0;
+var eCls=isE?" eaten":"";
+html+="<div class=\"cal-item"+eCls+"\" onclick=\"tgeat("+i+")\">";
+html+="<div class=\"cal-check\">"+(isE?"✓":"")+"</div>";
+html+="<div class=\"cal-text\">"+mealCals[i].n+"</div>";
+html+="<div class=\"cal-kcal\">"+mealCals[i].c+"</div>";
+html+="</div>";
+}
+
+if(customCals.length>0){
+html+="<div style=\"font-size:12px;color:#888;margin-top:10px;margin-bottom:6px\">🍴 M\u00F3n th\u00EAm (b\u1EA5m X \u0111\u1EC3 x\u00F3a):</div>";
+for(var i=0;i<customCals.length;i++){
+html+="<div class=\"cal-item eaten\">";
+html+="<div class=\"cal-check\" onclick=\"rmcust("+i+")\" style=\"border-color:#ef4444;background:#ef4444;cursor:pointer\">X</div>";
+html+="<div class=\"cal-text\">"+customCals[i].n+"</div>";
+html+="<div class=\"cal-kcal\">"+customCals[i].c+"</div>";
+html+="</div>";
+}
+}
+
+html+="<div class=\"cal-add\">";
+html+="<div style=\"font-size:12px;color:#888;margin-bottom:6px\">➕ Th\u00EAm m\u00F3n \u0111\u00E3 \u0103n:</div>";
+html+="<div class=\"cal-input-row\">";
+html+="<input class=\"cal-input\" id=\"cfname\" placeholder=\"T\u00EAn m\u00F3n (\u0056D: tr\u00E0 s\u1EEFa)\">";
+html+="<input class=\"cal-input\" id=\"cfcal\" type=\"number\" placeholder=\"Kcal\" style=\"width:80px;flex:none\">";
+html+="</div>";
+html+="<button class=\"btn\" onclick=\"addcust()\" style=\"width:100%;margin-top:6px;background:#f59e0b\">➕ Th\u00EAm</button>";
+
+html+="<div class=\"cal-quick\">";
+var qf=[
+["Tr\u00E0 s\u1EEFa",350],["N\u01B0\u1EDBc ng\u1ECDt",140],["Bia lon",150],["M\u00EC t\u00F4m",400],
+["B\u00E1nh m\u00EC",300],["X\u00F4i",350],["Ch\u00E8",200],["Kem",250],
+["K\u1EB9o/B\u00E1nh",150],["Tr\u00E0 \u0111\u00E0o",120],["C\u00E0 ph\u00EA s\u1EEFa",120],["C\u01A1m th\u00EAm",200],
+["B\u00E1nh tr\u00E1ng",200],["G\u00E0 r\u00E1n 1 mi\u1EBFng",250],["B\u1EAFp rang",180],["S\u1EEFa \u0111\u1EADu n\u00E0nh",100]
+];
+for(var i=0;i<qf.length;i++){
+html+="<div class=\"cal-qbtn\" onclick=\"quickadd('"+qf[i][0]+"',"+qf[i][1]+")\">"+qf[i][0]+" ("+qf[i][1]+")</div>";
+}
+html+="</div></div></div>";
+
+// THỰC ĐƠN
+var mealsDisplay=gMealsDisplay(dow);
+html+="<div class=\"box\"><h2>🍽️ Th\u1EF1c \u0111\u01A1n h\u00F4m nay (~"+totalPlan+" kcal)</h2>";
+for(var i=0;i<mealsDisplay.length;i++){
+var m=mealsDisplay[i];
+var ac=m[3]===curM?" ac":"";
+html+="<div class=\"ml"+ac+"\">";
+html+="<div class=\"mt\">"+m[0]+"</div>";
+html+="<div class=\"mn\">"+m[1]+"</div>";
+html+="<div class=\"mo\">"+m[2]+"</div>";
+html+="</div>";
+}
+html+="</div>";
+
+// BÀI TẬP
+html+="<div class=\"box\"><h2>💪 T\u1EADp h\u00F4m nay (~150-200 kcal)</h2>";
+if(dow===0){
+html+="<div style=\"font-size:12px;color:#888;margin-bottom:10px\">🧘 Ch\u1EE7 nh\u1EADt ngh\u1EC9 nh\u1EB9 (~130 kcal)</div>";
+html+="<div class=\"ex\"><div class=\"en\">1</div><div><div style=\"font-size:14px;font-weight:600\">🚶 \u0110i b\u1ED9 nh\u1EB9</div><div style=\"font-size:12px;color:#888\">20 ph\u00FAt (~100 kcal)</div></div></div>";
+html+="<div class=\"ex\"><div class=\"en\">2</div><div><div style=\"font-size:14px;font-weight:600\">🧘 Gi\u00E3n c\u01A1</div><div style=\"font-size:12px;color:#888\">10 ph\u00FAt (~30 kcal)</div></div></div>";
+}else{
+html+="<div style=\"font-size:12px;color:#888;margin-bottom:10px\">3 v\u00F2ng x 5 b\u00E0i = 15 ph\u00FAt</div>";
+var exL=[
+["🦵 Squat","20 c\u00E1i (~40 kcal)"],
+["💪 Ch\u1ED1ng \u0111\u1EA9y","10 c\u00E1i (~30 kcal)"],
+["🧘 Plank","30 gi\u00E2y (~15 kcal)"],
+["⭐ Jumping Jacks","30 c\u00E1i (~50 kcal)"],
+["🔥 G\u1EADp b\u1EE5ng","15 c\u00E1i (~25 kcal)"]
+];
+for(var i=0;i<exL.length;i++){
+html+="<div class=\"ex\"><div class=\"en\">"+(i+1)+"</div><div><div style=\"font-size:14px;font-weight:600\">"+exL[i][0]+"</div><div style=\"font-size:12px;color:#888\">"+exL[i][1]+"</div></div></div>";
+}
+}
+html+="</div>";
+
+// CẤM
+html+="<div class=\"ban\">";
+html+="<h3 style=\"font-size:13px\">⛔ C\u1EA4M TUY\u1EC6T \u0110\u1ED0I</h3>";
+html+="<p style=\"font-size:22px;letter-spacing:8px;margin:6px 0\">🧋 🥤 🍺 🌙</p>";
+html+="<span style=\"font-size:11px;opacity:.8\">Tr\u00E0 s\u1EEFa (350) \u00B7 N\u01B0\u1EDBc ng\u1ECDt (140) \u00B7 Bia (150) \u00B7 \u0102n khuya</span>";
+html+="</div>";
+
+// CHECKLIST
+var ckey="ck5_"+dateKey;
+var cks={};
+try{var tmp2=localStorage.getItem(ckey);if(tmp2)cks=JSON.parse(tmp2)}catch(e){}
+var ckL=[
+"☀️ Nh\u1ECBn \u0103n s\u00E1ng",
+"🍽️ \u0102n tr\u01B0a \u0111\u00FAng th\u1EF1c \u0111\u01A1n",
+"🌙 \u0102n t\u1ED1i nh\u1EB9 \u0111\u00FAng th\u1EF1c \u0111\u01A1n",
+"💪 T\u1EADp 15 ph\u00FAt",
+"💧 U\u1ED1ng \u0111\u1EE7 2L n\u01B0\u1EDBc",
+"🚫 Kh\u00F4ng tr\u00E0 s\u1EEFa/n\u01B0\u1EDBc ng\u1ECDt/bia",
+"🚫 Kh\u00F4ng \u0103n khuya",
+"🔥 D\u01B0\u1EDBi "+LIMIT+" kcal"
+];
+html+="<div class=\"box\"><h2>✅ Checklist h\u00F4m nay</h2>";
+for(var i=0;i<ckL.length;i++){
+var ok=cks[i]?" ok":"";
+html+="<div class=\"chk"+ok+"\" onclick=\"tck("+i+")\">";
+html+="<div class=\"cb\">"+(cks[i]?"✓":"")+"</div>";
+html+="<div class=\"ct\">"+ckL[i]+"</div></div>";
+}
+html+="</div>";
+
+// NƯỚC
+var wkey="wt5_"+dateKey;
+var wc=0;
+try{wc=parseInt(localStorage.getItem(wkey))||0}catch(e){}
+html+="<div class=\"box\"><h2>💧 U\u1ED1ng n\u01B0\u1EDBc (8 ly = 2L)</h2>";
+html+="<div style=\"text-align:center\">";
+for(var i=0;i<8;i++){
+var on=i<wc?" on":"";
+html+="<span class=\"dr"+on+"\" onclick=\"twt("+i+")\">💧</span>";
+}
+html+="</div>";
+html+="<div style=\"text-align:center;font-size:12px;color:#888;margin-top:8px\">"+wc+"/8 ly ("+wc*250+"ml)</div></div>";
+
+// CÂN NẶNG
+html+="<div class=\"box\" style=\"text-align:center\">";
+html+="<h2>⚖️ C\u1EADp nh\u1EADt c\u00E2n n\u1EB7ng</h2>";
+html+="<div style=\"margin:10px 0\"><input class=\"wi\" type=\"number\" id=\"winp\" placeholder=\"00.0\" step=\"0.1\"> <span style=\"color:#888\">kg</span></div>";
+html+="<button class=\"btn\" onclick=\"svw()\">💾 L\u01B0u</button>";
+try{
+var wh=JSON.parse(localStorage.getItem("wh5"));
+if(wh){
+var wks=Object.keys(wh).sort().reverse().slice(0,7);
+if(wks.length>0){
+html+="<div style=\"font-size:12px;color:#888;margin-top:14px\">📊 L\u1ECBch s\u1EED</div>";
+for(var i=0;i<wks.length;i++){
+var pp=wks[i].split("-");
+var df=(SW-wh[wks[i]]).toFixed(1);
+html+="<div class=\"wr\"><span>"+pp[2]+"/"+pp[1]+"/"+pp[0]+"</span><span>"+wh[wks[i]]+"kg";
+if(df>0)html+=" <span style=\"color:#4ade80\">(-"+df+")</span>";
+html+="</span></div>";
+}
+}
+}
+}catch(e){}
+html+="</div>";
+
+// QUOTE
+var quotes=[
+"8 th\u00E1ng s\u1EBD tr\u00F4i qua d\u00F9 b\u1EA1n gi\u1EA3m hay kh\u00F4ng",
+"Ki\u00EAn tr\u00EC th\u1EAFng t\u1EA5t c\u1EA3",
+"M\u1ED7i b\u1EEFa \u0111\u00FAng = 1 b\u01B0\u1EDBc g\u1EA7n 68kg",
+"Ch\u1EADm m\u00E0 ch\u1EAFc, 1.8kg/th\u00E1ng",
+"H\u00F4m nay kh\u00F3, ng\u00E0y mai s\u1EBD d\u1EC5 h\u01A1n",
+"\u0110\u1EEBng b\u1ECF cu\u1ED9c! B\u1EA1n \u0111\u00E3 \u0111i xa r\u1ED3i!",
+"Discipline = Freedom",
+"1.670 kcal \u2013 \u0111\u1EE7 \u0103n, \u0111\u1EE7 gi\u1EA3m, \u0111\u1EE7 kh\u1ECFe"
+];
+html+="<div class=\"quote\">\u201C"+quotes[Math.abs(dn)%quotes.length]+"\u201D</div>";
+
+document.getElementById("app").innerHTML=html;
+}catch(err){
+document.getElementById("app").innerHTML="<div class=\"box\" style=\"color:#ff6b6b\"><h2>L\u1ED7i:</h2><p>"+err.message+"</p></div>";
+}
+}
+
+function tgeat(i){
+var dk=gdk(gvd());var arr=gcals(dk);var idx=arr.indexOf(i);
+if(idx>=0)arr.splice(idx,1);else arr.push(i);
+scals(dk,arr);render();
+}
+
+function addcust(){
+var nm=document.getElementById("cfname").value.trim();
+var cl=parseInt(document.getElementById("cfcal").value);
+if(!nm){alert("Nh\u1EADp t\u00EAn m\u00F3n");return}
+if(!cl||cl<1){alert("Nh\u1EADp s\u1ED1 calo");return}
+var dk=gdk(gvd());var arr=[];
+try{var tmp=localStorage.getItem("ccal5_"+dk);if(tmp)arr=JSON.parse(tmp)}catch(e){}
+arr.push({n:nm,c:cl});
+localStorage.setItem("ccal5_"+dk,JSON.stringify(arr));render();
+}
+
+function quickadd(name,cal){
+var dk=gdk(gvd());var arr=[];
+try{var tmp=localStorage.getItem("ccal5_"+dk);if(tmp)arr=JSON.parse(tmp)}catch(e){}
+arr.push({n:name,c:cal});
+localStorage.setItem("ccal5_"+dk,JSON.stringify(arr));render();
+}
+
+function rmcust(i){
+var dk=gdk(gvd());var arr=[];
+try{var tmp=localStorage.getItem("ccal5_"+dk);if(tmp)arr=JSON.parse(tmp)}catch(e){}
+arr.splice(i,1);localStorage.setItem("ccal5_"+dk,JSON.stringify(arr));render();
+}
+
+function tck(i){
+var k="ck5_"+gdk(gvd());var c={};
+try{var tmp=localStorage.getItem(k);if(tmp)c=JSON.parse(tmp)}catch(e){}
+c[i]=!c[i];localStorage.setItem(k,JSON.stringify(c));render();
+}
+
+function twt(i){
+var k="wt5_"+gdk(gvd());var c=0;
+try{c=parseInt(localStorage.getItem(k))||0}catch(e){}
+c=i<c?i:i+1;localStorage.setItem(k,""+c);render();
+}
+
+function svw(){
+var el=document.getElementById("winp");var v=parseFloat(el.value);
+if(!v||v<50||v>100){alert("Nh\u1EADp 50-100kg");return}
+var wh={};try{var tmp=localStorage.getItem("wh5");if(tmp)wh=JSON.parse(tmp)}catch(e){}
+wh[gdk(gvd())]=v;localStorage.setItem("wh5",JSON.stringify(wh));
+el.value="";alert("\u0110\u00E3 l\u01B0u "+v+"kg ✅");render();
+}
+
+render();
+</script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
