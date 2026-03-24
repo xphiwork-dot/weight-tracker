@@ -107,7 +107,7 @@ body{font-family:Arial,sans-serif;background:#111;color:#fff;padding:12px;max-wi
 // Supabase config - Replace these with env vars in production
 const supabaseUrl = 'https://udmzkqhvknwsflewgfcc.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbXprcWh2a253c2ZsZXdnZmNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzNTE5ODUsImV4cCI6MjA4OTkyNzk4NX0.0rBauF-EarESfYrs9DZ6JtdUeIrPbtZdNk3zz2TTp0k';
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 var offset=0;
 var THU=["Ch\u1EE7 Nh\u1EADt","Th\u1EE9 Hai","Th\u1EE9 Ba","Th\u1EE9 T\u01B0","Th\u1EE9 N\u0103m","Th\u1EE9 S\u00E1u","Th\u1EE9 B\u1EA3y"];
